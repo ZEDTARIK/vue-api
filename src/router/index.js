@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import EventView from '../views/EventView.vue'
 import EventDetail from '../components/Events/EventDetail.vue'
+import PageNotFound from '../views/PageNotFound.vue'
 
 const routes = [{
         path: '/',
@@ -8,7 +9,7 @@ const routes = [{
     },
     {
         path: '/about',
-        name: 'about',
+        name: 'About',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
@@ -18,7 +19,7 @@ const routes = [{
     {
 
         path: '/events',
-        name: 'EventView',
+        name: 'Events',
         component: EventView
     },
     {
@@ -26,6 +27,11 @@ const routes = [{
         name: 'EventDetail',
         props: true,
         component: EventDetail
+    },
+    {
+        path: '/:catchAll(.*)',
+        name: 'PAgeNotFound',
+        component: PageNotFound
     }
 ]
 
