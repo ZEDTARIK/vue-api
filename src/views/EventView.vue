@@ -68,7 +68,7 @@ export default {
 }
 .pagination {
     display: flex;
-    width: 290px;
+    width: 943px;
 }
 .pagination a {
     flex: 1;
@@ -77,6 +77,7 @@ export default {
 }
 .page-prev {
     text-align: left;
+    width: 943px;
 }
 
 .page-next {
