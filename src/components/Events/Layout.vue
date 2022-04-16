@@ -2,13 +2,13 @@
   <div v-if="event">
     <h1>{{ event.title }}</h1>
     <nav>
-           <router-link :to="{ name: 'EventDetail', params: {id} }">
+           <router-link :to="{ name: 'EventDetail' }">
         Detail |
       </router-link>
-      <router-link :to="{ name: 'EventRegister', params: {id} }">
+      <router-link :to="{ name: 'EventRegister' }">
         Register |
       </router-link>
-      <router-link :to="{ name: 'EventEdit', params: {id} }">
+      <router-link :to="{ name: 'EventEdit' }">
         Edit 
       </router-link>
     </nav>
