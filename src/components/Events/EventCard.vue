@@ -1,3 +1,12 @@
+<template lang="">
+  <router-link Class="event-link" :to="{ name: 'EventDetail', params: { id: event.id}}">
+    <div Class="event-card">
+      <span> @ {{ event.time }} on {{ event.date }} </span>
+      <h4>{{ event.title }}</h4>
+    </div>
+  </router-link>
+</template>
+
 <script>
 export default {
   name: "EventCard",
@@ -9,15 +18,6 @@ export default {
   },
 };
 </script>
-
-<template lang="">
-  <router-link Class="event-link" :to="{ name: 'EventDetail', params: { id: event.id}}">
-    <div Class="event-card">
-      <span> @ {{ event.time }} on {{ event.date }} </span>
-      <h4>{{ event.title }}</h4>
-    </div>
-  </router-link>
-</template>
 
 <style scoped>
 .event-card {
