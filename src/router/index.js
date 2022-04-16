@@ -13,9 +13,10 @@ const routes = [{
         redirect: '/events'
     },
     {
-        path: '/about',
+        path: '/about-us',
         name: 'About',
-        component: About
+        component: About,
+        alias: '/about'
     },
     {
 
@@ -47,6 +48,15 @@ const routes = [{
                 component: EventEdit
             },
         ]
+    },
+
+    {
+        path: '/event/:afterEvent(.*)',
+        redirect: to => {
+            return {
+                path: '/events/' + to.params.afterEvent
+            }
+        }
     },
 
     {
